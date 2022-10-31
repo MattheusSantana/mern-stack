@@ -1,0 +1,28 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "MERN stack application API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattheusSantana/mern-stack.git"
+  },
+  "keywords": [
+    "mern",
+    "stack"
+  ],
+  "author": "Matheus Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattheusSantana/mern-stack/issues"
+  },
+  "homepage": "https://github.com/MattheusSantana/mern-stack#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
