@@ -35,18 +35,7 @@ const findAll = async (req, res) => {
 };
 
 const findById = async (req, res) => {
-  const id = req.params.id;
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({ message: "Invalid Id!" });
-  }
-
-  const user = await userService.findById(id);
-
-  if (!user) {
-    return res.status(400).send({ message: "User not found!" });
-  }
-
+  const user = req.user;
   res.send(user);
 };
 
@@ -58,15 +47,17 @@ const update = async (req, res) => {
       .status(400)
       .json({ message: "Please submit  at least one field for update!" });
   }
-  const id = req.params.id;
-  const user = userService.findById(id);
 
-  if (!user) {
-    return res.status(400).send({ message: "User not found!" });
-  }
+  const id = req.id;
 
-  const userUpdated = await userService.update(id, name, username, email, password);
- 
+  const userUpdated = await userService.update(
+    id,
+    name,
+    username,
+    email,
+    password
+  );
+
   res.status(201).json({
     message: "User updated successfully",
     userUpdated,
