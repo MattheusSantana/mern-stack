@@ -6,8 +6,21 @@ const findAll = () => User.find();
 
 const findById = (id) => User.findById(id);
 
-module.exports = { 
-    create, 
-    findAll, 
-    findById 
+const update = (id, name, username, email, password) => {
+  return User.findOneAndUpdate(
+    { _id: id },
+    {
+      name,
+      username,
+      email,
+      password,
+    }
+  );
+};
+
+module.exports = {
+  create,
+  findAll,
+  findById,
+  update,
 };
