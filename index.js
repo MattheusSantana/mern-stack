@@ -2,7 +2,7 @@ import express from 'express';
 import connectMongoDB from './src/mongo/connect.js';
 import getElasticSearchClient from './src/client/elasticsearch.js';
 import dotenv from 'dotenv';
-
+import cors from 'cors';
 import userRoute from './src/routes/user.route.js';
 import authRoute from './src/routes/auth.route.js';
 import productRoute from './src/routes/product.route.js';
@@ -11,9 +11,10 @@ import productRoute from './src/routes/product.route.js';
 dotenv.config();
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.port || 4000;
 
 app.use(express.json());
+app.use(cors());
 app.use('/user', userRoute);
 app.use('/auth', authRoute);
 app.use('/product', productRoute)

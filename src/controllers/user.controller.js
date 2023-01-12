@@ -36,7 +36,6 @@ const findAll = async (req, res) => {
         .status(400)
         .send({ message: "There are no registered users!" });
     }
-
     res.send(users);
   } catch (error) {
     res.status(500).send({ message: error.message });
