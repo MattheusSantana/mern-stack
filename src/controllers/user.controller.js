@@ -1,4 +1,4 @@
-import userService from '../services/user.service.js';
+import userService from "../services/user.service.js";
 
 const create = async (req, res) => {
   try {
@@ -31,6 +31,7 @@ const create = async (req, res) => {
 const findAll = async (req, res) => {
   try {
     const users = await userService.findAll();
+    
     if (users.length === 0) {
       return res
         .status(400)
