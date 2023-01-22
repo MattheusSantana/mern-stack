@@ -1,2 +1,4 @@
 node_modules
 .env
+mern_key.pem
+mern_aws.pem
