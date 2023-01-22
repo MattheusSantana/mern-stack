@@ -13,6 +13,7 @@ services:
       - 9300:9300
     environment:
       discovery.type: single-node
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elastic
   
