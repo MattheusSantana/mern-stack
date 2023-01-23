@@ -14,8 +14,7 @@
     "url": "git+https://github.com/MattheusSantana/mern-stack.git"
   },
   "keywords": [
-    "mern",
-    "stack"
+    "mern"
   ],
   "author": "Matheus Santana",
   "license": "ISC",
@@ -27,7 +26,7 @@
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "es7": "npm:@elastic/elasticsearch@^7.17.0",
+    "es7": "npm:@elastic/elasticsearch@^8.6.0",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.7.0",

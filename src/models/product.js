@@ -1,4 +1,3 @@
-import { ProductNotSupportedError } from "es7/lib/errors";
 import mongoose, { mongo } from "mongoose";
 
 const productSchema = new mongoose.Schema({
