@@ -1,0 +1,14 @@
+filebeat.inputs:
+    - type: log
+      enabled: true
+      paths:
+        - /var/lib/docker/containers/6ba58a26b93dfdd484475db0704777dd8b611d2c6d4f89bef3f4dd04f15b1612/*.log
+      document_type: nginx_access
+      # scan_frequency: 10s
+    
+output.logstash:
+  hosts: ["logstash:5044"]
+
+processors:
+  - add_docker_metadata:
+      host: "unix:///host_docker/docker.sock"
